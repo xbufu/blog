@@ -8,6 +8,8 @@ pygmentsStyle = "dracula"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
+IsMultiLingual = false
+Language = "en"
 
 [params]
 author = "Bufu"
@@ -16,7 +18,7 @@ keywords = "blog,developer,personal,hacker,security"
 info = ["Student", "Future Red Teamer"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
-footerContent = "Infosec notes."
+footerContent = "Infosec Notes."
 dateFormat = "January 2, 2006"
 hideFooter = false
 hideCredits = true
@@ -26,11 +28,6 @@ since = 2021
 # commit = "https://github.com/luizdepra/hugo-coder/tree/"
 # Right To Left, shift content direction for languagues such as Arabic
 rtl = false
-# Specify light/dark colorscheme
-# Supported values:
-# "auto" (use preference set by browser)
-# "dark" (dark background, light foreground)
-# "light" (light background, dark foreground) (default)
 colorScheme = "dark"
 # Hide the toggle button, along with the associated vertical divider
 hideColorSchemeToggle = false
