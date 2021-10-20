@@ -6,7 +6,7 @@ description = ""
 slug = ""
 author = "Bufu"
 tags = []
-categories = ["writeups"]
+categories = []
 externalLink = ""
 series = []
 +++
