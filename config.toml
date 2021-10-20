@@ -106,11 +106,6 @@ weight = 2
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "Writeups"
-weight = 2
-url = "writeups/"
-
-[[languages.en.menu.main]]
 name = "Projects"
 weight = 4
 url = "projects/"
