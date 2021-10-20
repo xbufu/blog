@@ -107,7 +107,7 @@ url = "posts/"
 
 [[languages.en.menu.main]]
 name = "Writeups"
-weight = 3
+weight = 2
 url = "writeups/"
 
 [[languages.en.menu.main]]
