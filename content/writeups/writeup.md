@@ -1,7 +1,6 @@
 +++ 
-draft = true
-date = {{ .Date }}
-title = ""
+date = 2021-10-22T23:27:27+02:00
+title = "writeup"
 description = ""
 slug = ""
 author = "Bufu"
@@ -10,3 +9,5 @@ categories = []
 externalLink = ""
 series = []
 +++
+
+# writeup
