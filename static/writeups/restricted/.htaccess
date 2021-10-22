@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile /writeups/restricted/.htpasswd
-Require valid-user
