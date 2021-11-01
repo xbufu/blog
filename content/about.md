@@ -6,8 +6,6 @@ aliases = ["about-us", "about-me", "contact"]
 author = "Bufu"
 +++
 
-## Who am I?
-
 - My name is Colin
 - Currently enrolled in a Bachelor's program in Computer Science
 - Working as a vulnerability analyst as a working student on the side

