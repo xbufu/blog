@@ -1,11 +1,11 @@
 +++ 
 draft = false
 date = 2021-11-06T21:55:10+01:00
-title = "Personal Knowledgebase"
+title = "Personal Knowledge Base"
 description = "Creating a personal wiki using Hugo and Github Pages."
-slug = "personal_knowledgebase"
+slug = "personal_knowledge_base"
 author = "Bufu"
-tags = ["hugo", "github pages"]
+tags = ["hugo", "github pages", "hosting"]
 categories = []
 externalLink = ""
 series = []
