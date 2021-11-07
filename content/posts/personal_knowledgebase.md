@@ -295,6 +295,12 @@ In `config/_default/config.toml`, change the very first line to include your cus
 baseurl = "https://demo.bufu-sec.com/"
 ```
 
+We also need to change line 15 in `config/_default/params.toml`:
+
+```markdown
+domainTLD = "demo.bufu-sec.com"
+```
+
 Create `static/CNAME`, which should contain your custom domain name. In my case, `demo.bufu-sec.com`.
 
 Finally, create `static/.nojekyll`. This will tell Github to not use Jekyll to render the content, since we are using Hugo.
