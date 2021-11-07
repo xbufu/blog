@@ -322,3 +322,5 @@ git push
 ```
 
 The last step is to navigate to `Settings -> Pages` in our destination repository and check the `Enforce HTTPS` option. You might need to wait 30 min to an hour for the certificate to become available, so just sit back, relax, and enjoy your very own online wiki!
+
+If you're interested in my final result, check out the source code [here](https://github.com/xbufu/wiki) and the deployed page at https://wiki.bufu-sec.com/. You can find the demo repository [here](https://github.com/xbufu/test_wiki).
