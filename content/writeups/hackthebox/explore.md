@@ -2,7 +2,7 @@
 date = 2021-11-01T09:13:36+01:00
 title = "HackTheBox - Explore"
 description = "Writeup for HackTheBox's Explore."
-slug = "htb-explore"
+slug = "explore"
 author = "Bufu"
 tags = ["android", "network", "cleartext credentials"]
 categories = ["HackTheBox", "Android", "Easy"]
