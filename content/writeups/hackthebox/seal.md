@@ -12,15 +12,15 @@ series = []
 
 ![Seal Card Info](/images/writeups/htb-seal/seal.png)
 
-- [User.txt](#usertxt)
+- [user.txt](#usertxt)
   - [Nmap Scan](#nmap-scan)
   - [Cleartext Credentials in Gitbucket](#cleartext-credentials-in-gitbucket)
   - [Accessing Tomcat Manager](#accessing-tomcat-manager)
   - [Deploying the WAR File](#deploying-the-war-file)
   - [Shell as luis](#shell-as-luis)
-- [Root.txt](#roottxt)
+- [root.txt](#roottxt)
 
-## User.txt
+## user.txt
 
 ### Nmap Scan
 
@@ -287,7 +287,7 @@ We can also read the `user.txt` file.
 
 ![User.txt](/images/writeups/htb-seal/user.txt.png)
 
-## Root.txt
+## root.txt
 
 It seems that our new user can actually execute a command using `sudo` without supplying a password!
 

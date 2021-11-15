@@ -12,15 +12,15 @@ series = []
 
 ![Explore Card Info](/images/writeups/htb-explore/explore.png)
 
-- [User.txt](#usertxt)
+- [user.txt](#usertxt)
   - [Nmap Scan](#nmap-scan)
   - [Accessing the File System through CVE-2019–6447](#accessing-the-file-system-through-cve-20196447)
   - [System Access over SSH](#system-access-over-ssh)
-- [Root.txt](#roottxt)
+- [root.txt](#roottxt)
   - [Port Forwarding](#port-forwarding)
   - [Escalating to root via adb](#escalating-to-root-via-adb)
 
-# User.txt
+# user.txt
 
 ## Nmap Scan
 
@@ -227,7 +227,7 @@ And we can see that we could successfully connect! As this is an Android machine
 
 ![user.txt]![SSH Access](/images/writeups/htb-explore/user.txt.png)
 
-# Root.txt
+# root.txt
 
 ## Port Forwarding
 
