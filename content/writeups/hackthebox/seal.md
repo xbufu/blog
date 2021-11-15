@@ -1,5 +1,4 @@
 +++ 
-draft = false
 date = 2021-11-15T09:23:11+01:00
 title = "HackTheBox - Seal"
 description = "Writeup for HackTheBox's Seal."
