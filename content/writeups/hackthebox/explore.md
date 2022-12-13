@@ -8,6 +8,7 @@ tags = ["android", "network", "cleartext credentials"]
 categories = ["HackTheBox", "Android", "Easy"]
 externalLink = ""
 series = []
+draft = true
 +++
 
 ![Explore Card Info](/images/writeups/htb-explore/explore.png)

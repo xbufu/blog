@@ -88,7 +88,7 @@ url = "https://twitter.com/0xBufu/"
 name = "RSS"
 icon = "fa fa-rss"
 weight = 6
-url = "https://bufu-sec.com/index.xml"
+url = "https://www.bufu-sec.com/index.xml"
 rel = "alternate"
 type = "application/rss+xml"
 
@@ -106,9 +106,9 @@ weight = 2
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "Writeups"
+name = "Tags"
 weight = 3
-url = "writeups/"
+url = "tags/"
 
 [[languages.en.menu.main]]
 name = "Projects"

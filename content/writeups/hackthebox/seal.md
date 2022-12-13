@@ -8,6 +8,7 @@ tags = ["cleartext credentials", "file misconfiguration", "path traversal"]
 categories = ["HackTheBox", "Linux", "Medium"]
 externalLink = ""
 series = []
+draft = true
 +++
 
 ![Seal Card Info](/images/writeups/htb-seal/seal.png)
