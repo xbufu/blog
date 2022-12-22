@@ -1,4 +1,4 @@
-baseURL = "https://bufu-sec.com"
+baseURL = "https://www.bufu-sec.com"
 title = "Bufu Blog"
 theme = "hugo-coder"
 languageCode = "en"
