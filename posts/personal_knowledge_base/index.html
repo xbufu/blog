@@ -1,0 +1,452 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="en">
+<meta name=color-scheme content="light dark">
+<meta http-equiv=content-security-policy content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+<meta name=author content="Bufu">
+<meta name=description content="Creating a personal wiki using Hugo and Github Pages.">
+<meta name=keywords content="blog,developer,personal,hacker,security">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Personal Knowledge Base">
+<meta name=twitter:description content="Creating a personal wiki using Hugo and Github Pages.">
+<meta property="og:title" content="Personal Knowledge Base">
+<meta property="og:description" content="Creating a personal wiki using Hugo and Github Pages.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bufu-sec.com/posts/personal_knowledge_base/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-11-06T21:55:10+01:00">
+<meta property="article:modified_time" content="2021-11-06T21:55:10+01:00">
+<title>
+Personal Knowledge Base · Bufu Blog
+</title>
+<link rel=canonical href=https://bufu-sec.com/posts/personal_knowledge_base/>
+<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css integrity="sha256-cIaG+KuBdukdRPy+SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.87.0">
+</head>
+<body class="preload-transitions colorscheme-dark">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=/>
+Bufu Blog
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/posts/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/tags/>Tags</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/projects/>Projects</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://wiki.bufu-sec.com>Wiki</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/contact/>Contact</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://bufu-sec.com/posts/personal_knowledge_base/>
+Personal Knowledge Base
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2021-11-06T21:55:10+01:00>
+November 6, 2021
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+9-minute read
+</span>
+</div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/tags/hugo/>hugo</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/github-pages/>github pages</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/hosting/>hosting</a>
+</span></div>
+</div>
+</header>
+<div>
+<h1 id=introduction>
+Introduction
+<a class=heading-link href=#introduction>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h1>
+<p>This article will teach you how to create your personal knowledge base, using the Hugo <a href=https://github.com/h-enk/doks>doks</a> theme and hosting it on Github Pages. We will also be using a custom domain name, bought from <a href=https://www.namecheap.com/>namecheap</a>.</p>
+<h2 id=why-hugo-and-not-a-dedicated-note-taking-app>
+Why Hugo and not a dedicated Note Taking App?
+<a class=heading-link href=#why-hugo-and-not-a-dedicated-note-taking-app>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>So why use Hugo? This seems like a lot of work compared to using an already premade solution, such as <a href=https://obsidian.md/>Obsidian</a>. Well, there are a couple of reasons.</p>
+<ol>
+<li>Markdown support: Other solutions also support this, but I think it is important to mention.</li>
+<li>Platform & editor independent: You can write your notes using any text editor on any OS. You only need git and Hugo, and you&rsquo;re good to go.</li>
+<li>Availability: Your notes are always available (as long as Github is up, of course) and backed up, including version control.</li>
+<li>Speed: As Hugo pages are static, they are incredibly fast, unlike other online solutions, e.g. Gitbook.</li>
+<li>Learning: This might not be the same for everyone, but I learned a ton about simple development, VCSs, and hosting while doing this project.</li>
+</ol>
+<h2 id=requirements>
+Requirements
+<a class=heading-link href=#requirements>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>For this project to work, there are only a couple of things you need:</p>
+<ul>
+<li><code>Node.js</code> and <code>npm</code> (<a href=https://docs.npmjs.com/downloading-and-installing-node-js-and-npm>Installation instructions</a>)</li>
+<li><code>Hugo</code> (<a href=https://gohugo.io/getting-started/installing/>Installation instructions</a>)</li>
+<li><code>git</code> (<a href=https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>Installation instructions</a>)</li>
+<li>Text editor of your choice (I prefer <a href=https://code.visualstudio.com/download>VS Code</a>)</li>
+<li>Recommended, but not required: a custom domain name, e.g. from <a href=https://www.namecheap.com/>namecheap</a>.</li>
+</ul>
+<p>I won&rsquo;t be going into on how to set up the requirements, as there are way better instructions in the official docs than I could provide here. Just follow the steps from the links above, then come back here when you&rsquo;re done!</p>
+<h2 id=setting-up-our-local-development-repository>
+Setting Up our Local Development Repository
+<a class=heading-link href=#setting-up-our-local-development-repository>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>The first thing we need to do, is set up a repository, where we will create and edit all of the content and notes we will be publishing.</p>
+<p>For that, browse to <a href=https://github.com/h-enk/doks/>https://github.com/h-enk/doks/</a> and click <code>Use this template</code>.</p>
+<p><img src=/images/posts/personal_knowledgebase/use_template.png alt="Use template"></p>
+<p>Now, give it the name you want and maybe a custom description. Make sure that the repository is public, as the theme uses code scanning, which requires it to be public.</p>
+<p><img src=/images/posts/personal_knowledgebase/create_repo.png alt="Create repository"></p>
+<p>You can download your repository to access it locally and make changes to it. Grab the link (preferably the SSH one) and clone it.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone git@github.com:xbufu/test_wiki.git
+</code></pre></div><p>Next, install all of the dependencies using <code>npm</code> and test out the default site.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#8be9fd;font-style:italic>cd</span> test_wiki
+npm install
+npm run start
+</code></pre></div><p>Installing the required packages with <code>npm</code> might take a minute. Once finished, you should be able to access the site by browsing to http://localhost:1313.</p>
+<p><img src=/images/posts/personal_knowledgebase/default_site.png alt="Default site"></p>
+<h2 id=github-actions-and-pull-requests>
+Github Actions and Pull Requests
+<a class=heading-link href=#github-actions-and-pull-requests>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>You might be wondering why you just received emails, notifiying you about multiple pull requests. That&rsquo;s because the doks theme uses Github Actions to scan your newly pushed code for possible updates to dependencies and vulnerabilities in the code itself.</p>
+<p>You should be able to just accept all of the pull requests as they come in, provided the checks pass. The only thing I had an issue with, was with the <code>stylelint</code> and <code>stylelint-config</code> dependencies. When I merged the pull requests, it would spit out syntax errors. To be on the safe side, I recommend not merging that one. Everything else should work just fine.</p>
+<p><img src=/images/posts/personal_knowledgebase/pull_requests.png alt="Pull requests"></p>
+<p><img src=/images/posts/personal_knowledgebase/workflows.png alt="Workflow runs"></p>
+<h2 id=adding-another-docs-section>
+Adding another Docs Section
+<a class=heading-link href=#adding-another-docs-section>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>You might notice that in the base theme, there is only a single page for your documentation. Since we are going to be using this site for notes pertaining to multiple topics, this won&rsquo;t be enough. In my case, I wanted to have a section for each major field in regards to Pentesting and Red Teaming, e.g. for Active Directory, WebApps, Internal, etc.</p>
+<p>There are, however, multiple steps required to achieve this. The good thing here is, that we can basically copy most of the code from the existing files for the default <code>docs</code> section.</p>
+<p>For this demo, we will create another section called <code>wiki</code>. Let&rsquo;s get started!</p>
+<h3 id=create-the-archetype>
+Create the Archetype
+<a class=heading-link href=#create-the-archetype>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>The archetype will be the template from which new files, i.e. notes, will be created. We can simply copy the archetype file for the <code>docs</code> section at <code>archetypes/docs.md</code> and call it <code>wiki.md</code>.</p>
+<p>You can make the body of the template whatever you want, but the front matter should look something like this:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>---
+title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
+description: &#34;&#34;
+lead: &#34;&#34;
+date: {{ .Date }}
+lastmod: {{ .Date }}
+draft: true
+images: []
+menu: 
+  wiki:
+    parent: &#34;&#34;
+weight: 999
+toc: true
+---
+</code></pre></div><p>Make sure to change the line under <code>menu:</code> according to your chosen section name, as otherwise your sidebar menu will not work. Also, be careful with using hyphens (-) in your name. They caused various issues for me, so if you plan to use longer names, stick to underscores (_).</p>
+<p>This is also the only time I will remind you to change the name accordingly, as it should be quite obvious. Every time you see <code>wiki</code>, replace it with your chosen name!</p>
+<h3 id=create-the-layouts>
+Create the Layouts
+<a class=heading-link href=#create-the-layouts>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>The next step is to create the layout files, which Hugo will use to create the HTML code from the Markdown code. The files we need to create are:</p>
+<ul>
+<li><code>layouts/wiki/list.html</code></li>
+<li><code>layouts/wiki/single.html</code></li>
+<li><code>layouts/partials/sidebar/wiki-menu.html</code></li>
+</ul>
+<p>Use the related files for the original <code>docs</code> section as templates. They are located at <code>layouts/docs/</code> and <code>layouts/partials/sidebar/docs-menu.html</code>.</p>
+<p>For <code>list.html</code>, you can just copy it from <code>layouts/docs/list.html</code>. There is no need to change anything.</p>
+<p>For <code>single.html</code>, replace <code>line 5</code> with:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>{{ partial &#34;sidebar/wiki-menu.html&#34; . }}
+</code></pre></div><p>For <code>wiki-menu.html</code>, replace all occurrences of <code>docs</code> with <code>wiki</code>. <strong>BUT</strong>: leave the <code>docs-link</code> ones as they are!</p>
+<h3 id=create-new-content>
+Create new Content
+<a class=heading-link href=#create-new-content>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>We can now create some sample content, using the command:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm run create wiki/demo/test.md
+</code></pre></div><p>This will create a new file at <code>content/en/wiki/demo/test.md</code> based on the archetype we created earlier.</p>
+<p>Edit the <code>title</code>, <code>description</code>, and <code>lead</code> however you like. Then change line 7 to <code>draft: false</code>, otherwise it will not show up in in the production site.</p>
+<p>You will also need to change line 11 to <code>parent: "demo"</code>. Change this value to whatever the parent folder of your new post is.</p>
+<p>Next, copy <code>content/en/docs/_index.md</code> to <code>content/en/wiki/_index.md</code> and <code>content/en/wiki/demo/_index.md</code>, and edit the <code>title</code> and <code>description</code>.</p>
+<h3 id=add-menu-entries>
+Add Menu Entries
+<a class=heading-link href=#add-menu-entries>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>After creating the content, we need to add the appropriate menu entries in <code>config/_default/menus/menus.en.toml</code>.</p>
+<p>For the new entry to show up in the top bar, add this after line 22:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>[[main]]
+  name = &#34;Wiki&#34;
+  url = &#34;/wiki/demo/test/&#34;
+  weight = 30
+</code></pre></div><p>Next, add the following after line 11:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>[[wiki]]
+  name = &#34;Demo&#34;
+  weight = 10
+  identifier = &#34;demo&#34;
+  url = &#34;/wiki/demo/&#34;
+</code></pre></div><p>This ensures that the sidebar menu will show up correctly when you browse to the page. The main page should now look something like this:</p>
+<p><img src=/images/posts/personal_knowledgebase/new_navbar.png alt="New navbar"></p>
+<p>When clicking on the new <code>wiki</code> entry, it should link to the new page we just created. The sidebar menus should also show correctly.</p>
+<p><img src=/images/posts/personal_knowledgebase/new_page.png alt="New page"></p>
+<h2 id=making-the-search-work>
+Making the Search Work
+<a class=heading-link href=#making-the-search-work>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>You might have noticed that compared to the original <code>docs</code> page, the search bar is not showing up on the new page. This part was the one I had the most trouble with, but it is one of the most important features of the project. To get it to work, there are multiple files we need to edit.</p>
+<h3 id=assetsscsscomponents_alertsscss>
+<code>assets/scss/components/_alerts.scss</code>
+<a class=heading-link href=#assetsscsscomponents_alertsscss>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Add a new entry after line 10 for the new section. Lines 10-13 should look like this:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css>.<span style=color:#50fa7b>docs</span> <span style=color:#ff79c6>main</span> .<span style=color:#50fa7b>alert</span><span style=color:#ff79c6>,</span>
+.<span style=color:#50fa7b>wiki</span> <span style=color:#ff79c6>main</span> .<span style=color:#50fa7b>alert</span> {
+  <span style=color:#ff79c6>margin</span>: <span style=color:#bd93f9>2</span><span style=color:#8be9fd>rem</span> <span style=color:#bd93f9>-1.5</span><span style=color:#8be9fd>rem</span>;
+}
+</code></pre></div><h3 id=config_defaultconfigtoml>
+<code>config/_default/config.toml</code>
+<a class=heading-link href=#config_defaultconfigtoml>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Here we define what our <code>docs</code> or main sections are. Add this at the bottom:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=font-weight:700># Search
+</span><span style=font-weight:700></span>[params]
+mainSections = [&#39;docs&#39;, &#39;wiki&#39;]
+</code></pre></div><h3 id=assetsjsindexjs>
+<code>assets/js/index.js</code>
+<a class=heading-link href=#assetsjsindexjs>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Replace line 97 here.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{{ $list <span style=color:#ff79c6>:=</span> where site.RegularPages <span style=color:#f1fa8c>&#34;Type&#34;</span> <span style=color:#f1fa8c>&#34;in&#34;</span> site.Params.mainSections <span style=color:#ff79c6>-</span>}}
+</code></pre></div><h3 id=layoutspartialsheaderheaderhtml>
+<code>layouts/partials/header/header.html</code>
+<a class=heading-link href=#layoutspartialsheaderheaderhtml>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Replace line 34 with</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{{<span style=color:#ff79c6>-</span> $active <span style=color:#ff79c6>=</span> and $active (<span style=color:#ff79c6>in</span> site.Params.mainSections $current.Section) <span style=color:#ff79c6>-</span>}}
+</code></pre></div><p>and replace line 96 with</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{{ <span style=color:#ff79c6>if</span> <span style=color:#ff79c6>in</span> site.Params.mainSections .Section <span style=color:#ff79c6>-</span>}}
+</code></pre></div><h3 id=layoutspartialsfooterscript-footerhtml>
+<code>layouts/partials/footer/script-footer.html</code>
+<a class=heading-link href=#layoutspartialsfooterscript-footerhtml>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Replace lines 77 and 102 with</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{{ <span style=color:#ff79c6>if</span> and .Site.Params.options.flexSearch (<span style=color:#ff79c6>in</span> site.Params.mainSections .Section) <span style=color:#ff79c6>-</span>}}
+</code></pre></div><p>Reloading the page, our new section will include a working search!</p>
+<p><img src=/images/posts/personal_knowledgebase/search.png alt="Working search"></p>
+<h2 id=minor-config-changes>
+Minor config changes
+<a class=heading-link href=#minor-config-changes>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>There are some config changes you might want to make.</p>
+<p>Edit the the social links and menu configuration in <code>config/_default/menus/menus.en.toml</code> and <code>config/_default/params.toml</code>.</p>
+<p>I also recommend you set both <code>codeFences</code> and <code>noClasses</code> to <code>true</code> in <code>config/_default/markup.toml</code>. This will enable syntax highlighting in code blocks. Honestly, no idea why this is not enabled by default.</p>
+<h2 id=deploying-to-github-pages>
+Deploying to Github Pages
+<a class=heading-link href=#deploying-to-github-pages>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>We can now deploy our site to Github Pages! There are only a couple of steps left.</p>
+<h3 id=create-destination-repository>
+Create Destination Repository
+<a class=heading-link href=#create-destination-repository>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>We will be creating another repository which will contain the content of the production website, located in the <code>public/</code> folder. I will be created one called <code>demo.bufu-sec.com</code>.</p>
+<h3 id=edit-github-actions>
+Edit Github Actions
+<a class=heading-link href=#edit-github-actions>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Next, we edit the <code>.github/workflows/node.js-ci.yml</code> workflow, so whenever we push new changes, it will automatically rebuild our site and deploy it to our new repository. <strong>IMPORTANT:</strong> Make these changes through github.com and not through your code editor.</p>
+<p>You can find the file at <a href=https://github.com/xbufu/test_wiki/blob/master/.github/workflows/gh-pages-ci.yml>https://github.com/xbufu/test_wiki/blob/master/.github/workflows/gh-pages-ci.yml</a>. Just make sure to change lines 5 and 7 to whatever your base branch is called in your repository, and set <code>external_repository</code> in line 35 to link to the new repo you just created.</p>
+<p>Commiting the changes will trigger a new workflow run, which will fail. This is intended, since we haven&rsquo;t set everything up yet or published our changes.</p>
+<p>Finally, pull the changes into your local repo:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git pull
+</code></pre></div><h3 id=add-ssh-key>
+Add SSH Key
+<a class=heading-link href=#add-ssh-key>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>So that our workflow can actually push changes to the new repository, we need to add a SSH private key as a secret in the source repository.</p>
+<p>Go to <code>Settings -> Secrets</code> and select <code>New repository secret</code>. Set the name to <code>PRIVATE_KEY</code> and paste your private key as the value.</p>
+<h3 id=setup-the-custom-domain-name>
+Setup the custom Domain Name
+<a class=heading-link href=#setup-the-custom-domain-name>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Since I will be hosting this project on a custom domain, specifically a subdomain of <code>bufu-sec.com</code>, I need to change the DNS settings for the domain in <code>namecheap</code>.</p>
+<p>In Namecheap, navigate to <code>Domain List -> bufu-sec.com -> Advanced DNS</code>. Add the following records:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Host</th>
+<th>Value</th>
+<th>TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A Record</td>
+<td>@</td>
+<td>185.199.108.153</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>A Record</td>
+<td>@</td>
+<td>185.199.109.153</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>A Record</td>
+<td>@</td>
+<td>185.199.110.153</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>A Record</td>
+<td>@</td>
+<td>185.199.111.153</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>@</td>
+<td>xbufu.github.io.</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>demo</td>
+<td>xbufu.github.io.</td>
+<td>30 min</td>
+</tr>
+</tbody>
+</table>
+<p>In <code>config/_default/config.toml</code>, change the very first line to include your custom domain:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>baseurl = &#34;https://demo.bufu-sec.com/&#34;
+</code></pre></div><p>We also need to change line 15 in <code>config/_default/params.toml</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>domainTLD = &#34;demo.bufu-sec.com&#34;
+</code></pre></div><p>Create <code>static/CNAME</code>, which should contain your custom domain name. In my case, <code>demo.bufu-sec.com</code>.</p>
+<p>Finally, create <code>static/.nojekyll</code>. This will tell Github to not use Jekyll to render the content, since we are using Hugo.</p>
+<h3 id=final-deployment>
+Final Deployment
+<a class=heading-link href=#final-deployment>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Before we commit and push our changes, run the following command to make sure we don&rsquo;t have any syntax errors in our project.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm run <span style=color:#8be9fd;font-style:italic>test</span>
+</code></pre></div><p>If everything went well, we only need to commit our changes and push them!</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
+git commit -m <span style=color:#f1fa8c>&#34;initial deployment&#34;</span>
+git push
+</code></pre></div><p>The last step is to navigate to <code>Settings -> Pages</code> in our destination repository and check the <code>Enforce HTTPS</code> option. You might need to wait 30 min to an hour for the certificate to become available, so just sit back, relax, and enjoy your very own online wiki!</p>
+<p>If you&rsquo;re interested in my final result, check out the source code <a href=https://github.com/xbufu/wiki>here</a> and the deployed page at <a href=https://wiki.bufu-sec.com/>https://wiki.bufu-sec.com/</a>. You can find the demo repository <a href=https://github.com/xbufu/test_wiki>here</a>.</p>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p>Infosec Notes.</p>
+©
+2021 -
+2022
+Bufu
+</section>
+</footer>
+</main>
+<script src=/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script>
+</body>
+</html>
